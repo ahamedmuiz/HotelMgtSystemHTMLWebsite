@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marriott Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container align-items-center">
+        <!--Logo. *add link for href later -->
+        <a class="navbar-brand" href="#" style="margin-top:-10px; margin-bottom:-12px;">
+            <img src="/assets/images/marriottblackandwhite.png"
+                 alt="Marriott header Logo"
+                 style="height:80px; width:auto;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- header Navbar list here add kinks to href  -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accommodations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dining</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Experiences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Meetings and Weddings</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--2nd head-->
+<div class="bg-body-secondary" style="height:60px;">
+    <div class="container h-100">
+        <div class="d-flex justify-content-between align-items-center border-bottom h-100">
+            <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0">Weligama Bay Marriott Resort & Spa</h6>
+                <div class="d-flex align-items-center">
+                    <div class="text-warning me-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+
+
+                    <span class="text-muted small">4.7 · <a  href="https://www.booking.com/reviews/lk/hotel/weligama-bay-marriott-resort-spa.en-gb.html?aid=356980&label=gog235jc-10CA0ohQFCIHdlbGlnYW1hLWJheS1tYXJyaW90dC1yZXNvcnQtc3BhSDNYA2iFAYgBAZgBM7gBGcgBDNgBA-gBAfgBAYgCAagCAbgCra-NxQbAAgHSAiQwNzRiYTRmYS1jMjQwLTRiNWMtYmYzNC0yOTM1YmYzMTVjYzfYAgHgAgE&sid=b87994874e1f38748481629750da792a&customer_type=total&hp_nav=0&keep_landing=1&order=featuredreviews&page=1&r_lang=en&rows=75&" target="_blank"> 1553 reviews </a></span>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-geo-alt me-1"></i>
+                    <a href="https://www.google.com/maps/place/..." class="text-decoration-none small" target="_blank">View Map</a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-telephone me-1"></i>
+                    <span class="small">+94 41-4600100</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------  Carousel slides    ------------------->
+<div id="carouselExampleIndicators" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-interval="3000" style="max-width: 1200px; height: 400px;">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+
+    <div class="carousel-inner h-100">
+        <div class="carousel-item active h-100">
+            <img src="/assets/images/slide01.jpeg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Slide 1">
+        </div>
+        <div class="carousel-item h-100">
+            <img src="/assets/images/slide2.jpeg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Slide 2">
+        </div>
+        <div class="carousel-item h-100">
+            <img src="/assets/images/slide03.jpeg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Slide 3">
+        </div>
+        <div class="carousel-item h-100">
+            <img src="/assets/images/slide04.jpeg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Slide 4">
+        </div>
+        <div class="carousel-item h-100">
+            <img src="/assets/images/slide05.jpeg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Slide 5">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>
