@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marriott Hotel</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Your custom CSS -->
+<link rel="stylesheet" href="../css/bodyStyle.css?v=1">
+
+</head>
+
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+  <div class="container align-items-center">
+    <a class="navbar-brand" href="#">
+<img src="assets/images/marriottblackandwhite.png" alt="Marriott Logo" style="height:80px; width:auto;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+      <ul class="navbar-nav nav-underline">
+  <li class="nav-item"><a class="nav-link active" href="#overview">Overview</a></li>
+  <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+  <li class="nav-item"><a class="nav-link" href="#dining">Dining</a></li>
+  <li class="nav-item"><a class="nav-link" href="#experiences">Experiences</a></li>
+  <li class="nav-item"><a class="nav-link" href="#meetings">Meetings & Events</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+</ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- 2nd Header -->
+<div class="bg-body-secondary" style="height:60px;">
+  <div class="container h-100">
+    <div class="d-flex justify-content-between align-items-center border-bottom h-100">
+      <div>
+        <h6 class="mb-0">Weligama Bay Marriott Resort & Spa</h6>
+        <div class="d-flex align-items-center">
+          <div class="text-warning me-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <span class="text-muted small">4.5 · <a href="#" target="_blank">1035 reviews</a></span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <div><i class="bi bi-geo-alt me-1"></i><a href="#" target="_blank" class="small">View Map</a></div>
+        <div><i class="bi bi-telephone me-1"></i><span class="small">+94 41-4600100</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Date / Rooms / Rates -->
+<div class="container-fluid bg-light py-3 border-bottom">
+  <div class="row text-center text-md-start align-items-center">
+
+    <!-- Dates -->
+    <div class="col-md-3 mb-2 mb-md-0">
+      <small class="text-muted">DATES (1 NIGHT)</small><br>
+      <div class="input-group">
+        <span class="input-group-text bg-white border-end-0"><i class="bi bi-calendar"></i></span>
+        <input type="text" id="dateRange" class="form-control border-start-0" placeholder="Select dates">
+      </div>
+    </div>
+
+    <!-- Rooms -->
+    <div class="col-md-3 mb-2 mb-md-0 border-start">
+      <small class="text-muted">ROOMS & GUESTS</small><br>
+      <div class="dropdown d-inline-block">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="roomsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          1 Room, 1 Adult
+        </button>
+        <div class="dropdown-menu p-3" style="min-width: 220px;">
+          <form>
+            <div class="mb-2">
+              <label for="roomCount" class="form-label mb-1">Rooms</label>
+              <select class="form-select form-select-sm" id="roomCount">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div>
+              <label for="guestCount" class="form-label mb-1">Guests</label>
+              <select class="form-select form-select-sm" id="guestCount">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Special Rates -->
+    <div class="col-md-3 mb-2 mb-md-0 border-start">
+      <small class="text-muted">SPECIAL RATES</small><br>
+      <div class="dropdown d-inline-block">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="specialRatesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Lowest Regular Rate
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="specialRatesDropdown">
+          <li><a class="dropdown-item" href="#">Lowest Regular Rate</a></li>
+          <li><a class="dropdown-item" href="#">Member Rate</a></li>
+          <li><a class="dropdown-item" href="#">Corporate Rate</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- View Rates -->
+    <div class="col-md-3 text-md-end mt-2 mt-md-0">
+      <a href="https://www.marriott.com/reservation/rateListMenu.mi" target="_blank" class="btn btn-danger rounded-pill px-4 text-white">View Rates</a>
+    </div>
+  </div>
+</div>
+
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-interval="3000" style="max-width:1200px; height:400px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner h-100">
+    <div class="carousel-item active h-100">
+<img src="assets/images/slide01.jpeg" class="d-block w-100 h-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item h-100">
+<img src="assets/images/slide02.jpeg" class="d-block w-100 h-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item h-100">
+<img src="assets/images/slide03.jpeg" class="d-block w-100 h-100" alt="Slide 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+<!-- Overview Section -->
+<section id="overview" class="py-5 bg-light">
+  <div class="container">
+    
+    <!-- Tagline -->
+    <p class="font-monospace text-center text-light bg-black bg-gradient p-3 rounded shadow">
+      Discover your coastal escape at <strong>Weligama Bay Marriott Resort & Spa</strong>
+    </p>
+
+    <!-- Main Heading -->
+    <h1 class="text-center mb-5 fw-bold">
+      Relax in luxury at our premier 5-star retreat <br> in Weligama, Sri Lanka.
+    </h1>
+
+    <!-- Content -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p class="lead">
+          Set along Sri Lanka’s radiant southern coastline, Weligama Bay Marriott Resort & Spa is a five-star beachfront sanctuary overlooking the turquoise waters of the Indian Ocean.
+        </p>
+
+        <p>
+          With 198 elegantly appointed rooms and suites, each featuring plush bedding, marble bathrooms with oversized soaking tubs, spacious work areas, and private balconies offering uninterrupted ocean views, the resort blends luxury with coastal serenity.
+        </p>
+
+        <p>
+          Guests are invited to indulge in world-class culinary experiences across a variety of signature venues. From global flavors at <strong>Weligama Kitchen</strong> and fresh seafood at <strong>Big Fish</strong>, to handcrafted cocktails at <strong>Tides</strong> and <strong>Surf’s Up Bars</strong>, artisan treats at <strong>Mirissa Baking Company</strong>, and seasonal delights at the <strong>Pop-up Restaurant</strong>, every meal is a celebration of taste and ambiance.
+        </p>
+
+        <p>
+          Perfectly positioned for both relaxation and adventure, the resort offers easy access to iconic southern attractions. Explore the historic charm of <strong>Galle Fort</strong>, witness the traditional art of stilt fishing, embark on whale watching excursions in <strong>Mirissa</strong>, or ride the waves at the renowned <strong>Weligama Bay surf point</strong>.
+        </p>
+
+        <div class="collapse" id="overviewMore">
+    <p>
+          After a day of discovery, unwind at <strong>Quan Spa</strong>, lounge by the infinity pool, stay active in the fully equipped fitness center, or enjoy romantic sunset strolls along the beach.
+        </p>
+
+        <p>
+          Weligama Bay Marriott is also a premier destination for weddings and events. With versatile indoor and outdoor venues, breathtaking coastal backdrops, and expert planning services, the resort transforms special moments into unforgettable celebrations.
+        </p>
+
+        <p class="fw-semibold">
+          Whether you're here to relax, explore, celebrate, or simply soak in the beauty of the southern coast, Weligama Bay Marriott Resort & Spa offers a refined escape where elegance meets the ocean.
+        </p>
+  </div>
+
+  <!-- Toggle Button -->
+  <a class="btn btn-outline-dark mt-3" data-bs-toggle="collapse" href="#overviewMore" role="button" aria-expanded="false" aria-controls="overviewMore">
+    See more
+  </a>
+</div>
+        
+      </div>
+    </div>
+
+  </div>
+
+ 
+</section>
+
+<br>
+<!-- Gallery nav -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container text-center">
+    <h1 class="display-2 mb-4">Gallery</h1>
+
+    <ul class="nav justify-content-center border-bottom pb-2 flex-wrap mb-4">
+      <li class="nav-item">
+        <a class="nav-link active fw-semibold text-dark" href="#hotel-view">Hotel View</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-semibold text-dark" href="#guest-rooms">Guest Rooms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-semibold text-dark" href="#fitness">Wellness & Fitness</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-semibold text-dark" href="#dining">Dining</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-semibold text-dark" href="#weddings">Wedding & Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-semibold text-dark" href="#spa">Spa</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Hotel View Section -->
+  <section id="hotel-view" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-3">
+
+        <h5 ><strong> Hotel View</Strong></h5>
+
+        <hr>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel1.jpeg" class="gallery-img" alt="Hotel View 1">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel2.jpeg" class="gallery-img" alt="Hotel View 2">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel3.jpeg" class="gallery-img" alt="Hotel View 3">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel4.jpeg" class="gallery-img" alt="Hotel View 4">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel5.jpeg" class="gallery-img" alt="Hotel View 5">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel6.jpg" class="gallery-img" alt="Hotel View 6">
+        </div>
+      </div>
+
+       <br>
+      
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel7.jpg" class="gallery-img" alt="Hotel View 7">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel8.jpg" class="gallery-img" alt="Hotel View 8">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/hotel view/hotel9.jpg" class="gallery-img" alt="Hotel View 9">
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <!-- Guest Rooms Section -->
+  <section id="guest-rooms" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-3">
+
+        <h5 ><strong>Rooms</Strong></h5>
+        <hr>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room1.jpeg" class="gallery-img" alt="Guest Room 1">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room2.jpeg" class="gallery-img" alt="Guest Room 2">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room3.jpeg" class="gallery-img" alt="Guest Room 3">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room4.jpg" class="gallery-img" alt="Guest Room 4">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room5.jpg" class="gallery-img" alt="Guest Room 5">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room6.jpg" class="gallery-img" alt="Guest Room 6">
+        </div>
+      </div>
+
+       <br>
+      
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room7.jpg" class="gallery-img" alt="Guest Room 7">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room8.jpg" class="gallery-img" alt="Guest Room 8">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/guest rooms/room9.jpeg" class="gallery-img" alt="Guest Room 9">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- fitness Section -->
+  <section id="fitness" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-3">
+
+        <h5 ><strong>Fitness</Strong></h5>
+        <hr>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/fitness/fitness1.jpg" class="gallery-img" alt="fitness 1">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/fitness/fitness2.jpg" class="gallery-img" alt="fitness 2">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/fitness/fitness3.jpg" class="gallery-img" alt="fitness 3">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/fitness/fitness4.jpeg" class="gallery-img" alt="fitness 4">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/fitness/fitness5.jpg" class="gallery-img" alt="fitness 5">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/fitness/fitness6.jpeg" class="gallery-img" alt="fitness 6">
+        </div>
+      </div>
+</div>
+  </section>
+
+<!-- dining Section -->
+  <section id="dining" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-3">
+
+      <!-- Section Title -->
+      <h2 class="text-center fw-bold mb-3">Dining at Weligama Bay Marriott Resort & Spa</h2>
+      <hr class="mb-4">
+
+      <!-- Subheading -->
+      <h5 class="text-center text-muted mb-4">
+        A Luxury Collection Hotel in the Heart of Weligama
+      </h5>
+
+      <!-- Tagline -->
+      <h1 class="display-5 text-center mb-5">
+        Enjoy a perfect blend of exquisite cuisine, refreshing drinks, and warm hospitality-where every meal becomes a memorable experience.
+      </h1>
+
+
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/dining/dining1.jpeg" class="gallery-img" alt="Dining 1">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/dining/dining2.jpg" class="gallery-img" alt="Dining 2">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/dining/dining3.jpg" class="gallery-img" alt="Dining 3">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/dining/dining4.jpg" class="gallery-img" alt="Dining 4">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/dining/dining5.jpg" class="gallery-img" alt="Dining 5">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/dining/dining6.jpg" class="gallery-img" alt="Dining 6">
+        </div>
+      </div>
+</div>
+  </section>
+
+  <!-- WEDDING Section -->
+  <section id="weddings" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-3">
+
+        <h5 ><strong>Wedding & Events</Strong></h5>
+        <hr>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/wedding/wedding1.jpeg" class="gallery-img" alt="Wedding 1">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/wedding/wedding2.jpeg" class="gallery-img" alt="Wedding 2">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/wedding/wedding3.jpeg" class="gallery-img" alt="Wedding 3">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/wedding/wedding4.jpg" class="gallery-img" alt="Wedding 4">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/wedding/wedding5.jpg" class="gallery-img" alt="Wedding 5">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/wedding/wedding6.jpeg" class="gallery-img" alt="Wedding 6">
+        </div>
+      </div>
+</div>
+  </section>
+
+<!-- Spa Section -->
+  <section id="spa" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-3">
+
+        <h5 ><strong>Spa</Strong></h5>
+        <hr>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/spa/spa7.jpg" class="gallery-img" alt="spa 7">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/spa/spa2.jpeg" class="gallery-img" alt="spa 2">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/spa/spa3.jpeg" class="gallery-img" alt="spa 3">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/spa/spa4.jpeg" class="gallery-img" alt="spa 4">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/spa/spa5.jpg" class="gallery-img" alt="spa 5">
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/galleryimgs/spa/spa6.jpg" class="gallery-img" alt="spa 6">
+        </div>
+      
+      </div>
+      
+</div>
+  </section>
+<hr>
+
+</section>
+<!-- Experience Section -->
+<section id="experiences" class="py-5 bg-light">
+  <div class="container">
+
+<h1 class="display-4 text-center fw-semibold text-dark mb-5" style="font-family: 'Georgia', serif;">
+  Unforgettable Experiences at Weligama Bay Marriott Resort & Spa
+</h1>
+
+<!-- Experience imagefeedback -->
+
+<div id="card-img"  style="width: 18rem;">
+  <div> <img src="/assets/images/galleryimgs/spa/spa7.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"> <strong> <br> "Excellent spa service! The atmosphere was peaceful, the staff were professional, and the treatments were outstanding. I felt completely relaxed and taken care of."</strong></p>
+    
+  </div></div>
+ 
+<div> <img src="/assets/images/galleryimgs/fitness/fitness3.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"> <Strong> <br> "The gym facilities were excellent — modern equipment, clean environment, and a spacious layout. The staff were helpful, and I never had to wait for a machine. Truly a great fitness experience."</Strong></p>
+    
+  </div></div>
+ 
+<div> <img src="/assets/images/galleryimgs/dining/dining2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"> <Strong> <br> "Dining by the beach was simply unforgettable. The view of the ocean at sunset, combined with delicious food and attentive service, created the perfect atmosphere. A must-try experience!"</Strong></p>
+    
+  </div></div>
+
+</div>
+
+  </div>
+  <hr>
+</section>
+<!-- Meeting & Events Section -->
+<section id="meetings" class="py-5 bg-light">
+  <div class="container text-center">
+    <!-- Heading -->
+    <h1 class="display-4 fw-bold mb-3">Meetings & Events</h1>
+    <h5 class="text-muted mb-5">Weligama Bay Marriott Resort & Spa</h5>
+
+    <!-- Intro -->
+    <p class="lead mb-5">
+      Host unforgettable meetings and events at Weligama Bay Marriott Resort & Spa, 
+      where modern venues meet breathtaking oceanfront views and world-class service.
+    </p>
+
+    <!-- Stats Row -->
+    <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+      <div class="col">
+        <div class="p-3 shadow-sm rounded bg-white">
+          <h2 class="fw-bold">10</h2>
+          <p class="mb-0">Meeting Rooms</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3 shadow-sm rounded bg-white">
+          <h2 class="fw-bold">375</h2>
+          <p class="mb-0">Guest Rooms</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3 shadow-sm rounded bg-white">
+          <h2 class="fw-bold">39,924 <small>sq. ft.</small></h2>
+          <p class="mb-0">Total Event Space</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3 shadow-sm rounded bg-white">
+          <h2 class="fw-bold">17,730 <small>sq. ft.</small></h2>
+          <p class="mb-0">Largest Room Setup</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Highlight Text -->
+    <div class="mb-5 px-4">
+      <h4 class="fw-semibold mb-3">
+        ✨ Celebrate and Connect at Marriott Resort & Spa
+      </h4>
+      <p class="text-muted">
+        Whether you’re planning a wedding, anniversary, or business event, our resort offers 
+        the perfect setting. Exchange vows on pristine beaches, enjoy elegant accommodations, 
+        and savor world-class dining designed to make every moment special. For meetings and 
+        private events, our modern venues and attentive service ensure everything runs seamlessly. 
+        For an unforgettable experience, you can even reserve the entire island and enjoy a 
+        variety of recreational and wellness activities with your guests.
+      </p>
+    </div>
+
+   <br><br>
+
+    <div id="card-wedding">
+       <div class="wedding-card"> 
+      <img src="/assets/images/galleryimgs/wedding/weddingpink.jpeg" class="card-wedding-top" alt="Wedding"> 
+       <div class="card-body"> 
+        <br>
+        <h3> <strong style="font-family: 'Great Vibes', cursive;" >Weddings & Romance</strong></h3>
+         <p class="card-text">Plan the wedding of your dreams at Marriott Resort & Spa,
+           and celebrate a special moment or milestone of love or achievement. 
+           Our dedicated resort team will curate an unforgettable experience for you.</p> 
+          </div> 
+        </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+ <section id="contact" class="py-5 bg-light">
+
+<footer class="text-light" style="background-color: #000;">
+  <div class="container py-4">
+
+    <!-- Top Row -->
+    <div class="d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-3">
+      <div>
+        <i class="bi bi-geo-alt me-2"></i>
+        <a href="#" target="_blank" class="text-light text-decoration-none small">Location</a>
+      </div>
+      <div>
+        <i class="bi bi-telephone me-2"></i>
+        <span class="small">+94 41-4600100</span>
+      </div>
+      <div>
+<i class="bi bi-building"></i> 
+        <span class="small fw-bold">Marriott Resort & Spa</span>
+      </div>
+    </div>
+    <!-- Middle Info -->
+    <div class="text-center mb-3">
+      <h6 class="mb-0">WELIGAMA BAY MARRIOTT® RESORT & SPA</h6>
+      <p class="small mb-0">
+        700 Matara Road, Pelana, Weligama, Sri Lanka, 81700
+      </p>
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="text-center border-top pt-3">
+      <small class="text-muted">
+        © 2025 Weligama Bay Marriott Resort & Spa. All Rights Reserved.
+      </small>
+    </div>
+  </div>
+</footer>
+ </section>
+
+<!-- Bootstrap JS + Flatpickr + Custom JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="../js/script.js?v=1"></script>
+
+</body>
+</html>

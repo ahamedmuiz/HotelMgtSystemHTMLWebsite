@@ -1,0 +1,73 @@
+body {
+  padding-top: 105px;
+}
+/* Gallery Section */
+#gallery h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 15px;
+}
+
+#gallery h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #dc3545; 
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Gallery Navigation */
+#gallery .nav-link {
+  color: #555;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+#gallery .nav-link:hover {
+  color: black;
+  border-bottom: 2px solid #dc3545;
+}
+
+#gallery .nav-link.active {
+  color: black;
+  border-bottom: 2px solid #dc3545;
+}
+
+/* Gallery Images */
+.gallery-img {
+  width: 100%;
+  height: 250px;       
+  object-fit : cover;   
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px black;
+}
+
+#card-img{
+display: flex;
+flex-direction: row;
+gap: 25px;
+margin-left: 30px;
+
+
+}
+.card-img-top{
+  width: 25vw;
+  height: 25vw;
+    border-radius: 8px; 
+
+}
+
+#card-wedding{
+display:flex;
+ flex-direction:row;
+  gap:25px;
+   margin-left:60px;
+
+}
+
+.card-wedding-top {
+  width: 60vw;
+  height: 35vw;
+}
